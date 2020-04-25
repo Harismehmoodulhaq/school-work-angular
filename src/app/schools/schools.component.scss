@@ -1,0 +1,21 @@
+:host{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    grid-row: auto ;
+}
+
+.example-card {
+    max-width: 100%;
+    // padding-top: 0;
+    padding:20px;
+    align-items: center;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/image/download.png');
+    background-size: 100%;
+  }
+  .example-header-image{
+      transform: scale(.8);
+  }
