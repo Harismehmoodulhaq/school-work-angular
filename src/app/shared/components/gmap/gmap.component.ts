@@ -15,8 +15,10 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 export class GmapComponent implements OnInit {
   @ViewChild('mapRef', {static: true }) mapElement: ElementRef;
   //google api key Gmap app
-  private API_KEY = "AIzaSyDFsPlP4VHtnGRx8X-XULmCLB_wcjG15Sc";
+  private API_KEY = "AIzaSyBcKp8Rtc4wPHVAE2pBBQ3o4uTtCDO-_XI";
+  
   @Input() options: any;
+
   constructor() {
     debugger;
    }
@@ -24,6 +26,7 @@ export class GmapComponent implements OnInit {
   ngOnInit(): void {
     debugger;
     this.renderMap()
+    // this.loadMap()
   }
   loadScript (id: string, url: string) {
     const s = window.document.createElement("script");
@@ -39,19 +42,19 @@ export class GmapComponent implements OnInit {
       this.loadMap();     
     }
     if(!window.document.getElementById('google-map-script')) {
-      this.loadScript ("google-map-script",`https://maps.googleapis.com/maps/api/js?key=${this.API_KEY};callback=initMap`);
+      this.loadScript ("google-map-script",`https://maps.googleapis.com/maps/api/js?key=${this.API_KEY}&callback=initMap`);
     } else {
       this.loadMap();
     }
   }
   loadMap = () => {
     const map = new window['google'].maps.Map(this.mapElement.nativeElement, {
-      center: {lat: 24.5373, lng: 81.3042},
+      center: {lat: 31.54972, lng: 74.34361},
       zoom: 8
     });
   
     const marker = new window['google'].maps.Marker({
-      position: {lat: 24.5373, lng: 81.3042},
+      position: {lat: 31.54972, lng: 74.34361},
       map: map,
       title: 'Hello World!',
       draggable: true,
@@ -61,9 +64,9 @@ export class GmapComponent implements OnInit {
     const contentString = `<div id="content">
     <div id="siteNotice">
     </div>
-    <h3 id="thirdHeading" class="thirdHeading">W3path.com</h3>
+    <h3 id="thirdHeading" class="thirdHeading">DHA School</h3>
     <div id="bodyContent">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>This is a test Project</p>
     </div>
     </div>`;
   

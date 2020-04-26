@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { userExists } from 'src/app/shared/db-users';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,15 +10,18 @@ import { userExists } from 'src/app/shared/db-users';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
+
   login(email, password) {
     
     if(userExists(email, password)){
       this.authService.authenticate();
+     
     }
+   
 
   }
   cancel() { }

@@ -18,6 +18,7 @@ export class AuthService {
   }
   authenticate () {
    this.auth = true;
+   this.router.navigate(["/dashbord"]);
   }
 
   logout () {
