@@ -4,8 +4,8 @@
         <mat-icon>menu</mat-icon>
       </button>
       <span class="spacer"></span>
-        <a mat-button routerLink="/admin">Register</a>
-        <a mat-button routerLink="/dashbord">login</a>
+        <!-- <a mat-button routerLink="/admin">Register</a> -->
+        <a mat-button (click)="logout()" >logout</a>
     </mat-toolbar>
   
     <mat-sidenav #start mode="push">

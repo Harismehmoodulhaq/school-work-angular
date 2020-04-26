@@ -3,19 +3,19 @@
     
     <mat-toolbar>Login</mat-toolbar>
 
-    <!-- CONTENT HERE -->
+  
     <mat-card-content>
 
         <form class="my-form">
 
             <mat-form-field class="full-width">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" name="email">
+                <input #email matInput placeholder="Email" name="email">
             </mat-form-field>
 
             <mat-form-field class="full-width">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Password" name="password">
+                <input #pass matInput placeholder="Password" name="password">
             </mat-form-field>
 
         </form>
@@ -23,8 +23,8 @@
     </mat-card-content>
 
     <mat-card-actions class="toolbar">
-        <!-- REGISTER BUTTON -->
-        <button mat-raised-button (click)="login()" color="primary" routerLink="/">Login</button>
+       
+        <button mat-raised-button (click)="login(email.value, pass.value)" color="primary" routerLink="/">Login</button>
         
     </mat-card-actions>
 

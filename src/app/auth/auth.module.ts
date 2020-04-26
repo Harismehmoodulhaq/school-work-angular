@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
-import { AuthComponent } from './auth.component';
+import { AuthRoutingModule, DECLARATIONS } from './auth-routing.module';
 import { AngularMaerialModule } from '../shared/modules/angular-maerial/angular-maerial.module';
 
 
 
+
+
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [...DECLARATIONS],
   imports: [
     CommonModule,
+    AngularMaerialModule,
     AuthRoutingModule,
-    AngularMaerialModule
+
+
   ]
 })
 export class AuthModule { }

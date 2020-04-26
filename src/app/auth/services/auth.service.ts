@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  private auth = true;
+  private auth = false;
 
   constructor(
     private router : Router
@@ -22,7 +22,7 @@ export class AuthService {
 
   logout () {
     this.auth = false;
-    this.router.navigate(["auth/login"]);
+    this.router.navigate(["/login"]);
   }
 
 }
