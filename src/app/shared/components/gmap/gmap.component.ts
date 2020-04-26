@@ -4,6 +4,9 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 //https://sleepy-wildwood-25736.herokuapp.com/
 //https://console.cloud.google.com/apis/credentials?project=gmap-275306&supportedpurview=project
 //https://codemeals.com/angular-tutorials/deploy-angular-7-app-to-heroku/
+
+//https://radiant-sea-45535.herokuapp.com/ | https://git.heroku.com/radiant-sea-45535.git
+
 @Component({
   selector: 'app-gmap',
   templateUrl: './gmap.component.html',
