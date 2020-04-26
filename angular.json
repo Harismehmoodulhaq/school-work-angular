@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "school-work"
+  "defaultProject": "school-work",
+  "cli": {
+    "analytics": "28fd6b5e-270b-49e8-acaf-bb55525c272c"
+  }
 }

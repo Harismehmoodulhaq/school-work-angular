@@ -5,18 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaerialModule } from './shared/modules/angular-maerial/angular-maerial.module';
-import { GmapComponent } from './shared/components/gmap/gmap.component';
+import { RouterModule } from '@angular/router';
+import { LoginComponent } from './auth/login/login.component';
+import { OutletComponent } from './outlet/outlet.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    GmapComponent
+    OutletComponent,
+    // GmapComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   
-    AngularMaerialModule
+    AngularMaerialModule, RouterModule.forRoot([
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      // { path: 'register', component: Regis },
+      { path: 'login', component: LoginComponent },
+       
+     
+    ]),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

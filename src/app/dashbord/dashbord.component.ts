@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashbordComponent implements OnInit {
 
+  gmap : any = {
+    title: "Google Map"
+  }
+
   constructor() { }
 
   ngOnInit(): void {
