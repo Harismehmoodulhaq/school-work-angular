@@ -1,46 +1,18 @@
-<!-- <h1>
-    Assalam-o-alikum,
-        Welcome to Schools
-</h1> -->
 
-    <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>DHA School</mat-card-title>
-          <mat-card-subtitle>School in Karachi</mat-card-subtitle>
-        </mat-card-header>
-      <img mat-card-image src="../../assets/image/download.jpeg" alt="DHA School">
-        <mat-card-content>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>DHA School</mat-card-title>
-          <mat-card-subtitle>School in Karachi</mat-card-subtitle>
-        </mat-card-header>
-      <img mat-card-image src="../../assets/image/download.jpeg" alt="DHA School">
-        <mat-card-content>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>DHA School</mat-card-title>
-          <mat-card-subtitle>School in Karachi</mat-card-subtitle>
-        </mat-card-header>
-      <img mat-card-image src="../../assets/image/download.jpeg" alt="DHA School">
-        <mat-card-content>
-        </mat-card-content>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>DHA School</mat-card-title>
-          <mat-card-subtitle>School in Karachi</mat-card-subtitle>
-        </mat-card-header>
-      <img mat-card-image  src="../../assets/image/download.jpeg" alt="DHA School">
-        <mat-card-content>
-        </mat-card-content>
-      </mat-card>
+<ng-container *ngIf="cards ; else notfound">
+  <ng-container *ngFor="let card of cards">
+   
+    <app-card [card]="card" routerLink="/schools/{{card.id}}" ></app-card>
 
+  </ng-container>
+</ng-container>
+
+<ng-template #notfound>
+  <mat-card>
+    <mat-card-content>
+     <mat-card-header>
+       <mat-card-title>No schools found</mat-card-title>
+     </mat-card-header>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

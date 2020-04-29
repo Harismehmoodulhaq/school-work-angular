@@ -9,7 +9,9 @@ import { AngularMaerialModule } from '../shared/modules/angular-maerial/angular-
 
 
 @NgModule({
-  declarations: [...DECLARATIONS],
+  declarations: [...DECLARATIONS, 
+    // DetailComponent
+  ],
   imports: [
     CommonModule,
     AngularMaerialModule,

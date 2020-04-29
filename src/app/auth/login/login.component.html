@@ -8,15 +8,30 @@
 
         <form class="my-form">
 
-            <mat-form-field class="full-width">
+            <!-- <mat-form-field class="full-width">
+                <mat-label>Username</mat-label>
+                <input #email matInput placeholder="Username" name="username">
+            </mat-form-field> -->
+
+            <!-- <mat-form-field class="full-width">
                 <mat-label>Email</mat-label>
                 <input #email matInput placeholder="Email" name="email">
+            </mat-form-field> -->
+
+            <mat-form-field class="full-width">
+                <mat-label>UserName</mat-label>
+                <input #username matInput  name="username">
             </mat-form-field>
 
             <mat-form-field class="full-width">
+                <mat-label>PinCode</mat-label>
+                <input #pin matInput  name="pinCode">
+            </mat-form-field>
+
+            <!-- <mat-form-field class="full-width">
                 <mat-label>Password</mat-label>
                 <input #pass matInput placeholder="Password" type="password" name="password">
-            </mat-form-field>
+            </mat-form-field> -->
 
         </form>
        
@@ -24,7 +39,7 @@
 
     <mat-card-actions class="toolbar">
        
-        <button mat-raised-button (click)="login(email.value, pass.value)" color="primary" routerLink="/">Login</button>
+        <button mat-raised-button (click)="login(username.value, pin.value)" color="primary" routerLink="/">Login</button>
         
     </mat-card-actions>
 

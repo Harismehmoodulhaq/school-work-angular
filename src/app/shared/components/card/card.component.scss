@@ -1,0 +1,14 @@
+.card {
+    max-width: 100%;
+    // padding-top: 0;
+    padding:20px;
+    align-items: center;
+  }
+  
+  .header-image {
+    // background-image: url('../../assets/image/download.png');
+    background-size: 100%;
+  }
+  .header-image{
+      transform: scale(.8);
+  }

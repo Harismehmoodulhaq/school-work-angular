@@ -3,17 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
+import { LoginPageGuard } from '../shared/services/login-page.guard';
 
 
 export const DECLARATIONS = [
   LoginComponent,
-  AuthComponent
+  AuthComponent,
 ]
 
 const routes: Routes = [
   { path: '', redirectTo: 'login' },
-  { path: 'login', component: LoginComponent },
-  
+  { path: 'login', canActivate:[LoginPageGuard] , component: LoginComponent },
 ];
 
 @NgModule({
